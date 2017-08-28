@@ -31,11 +31,11 @@
 	  <p>
 	    <label for="user_login">Nom d’utilisateur ou adresse e-mail<br>
 	    <b><span ng-bind="mainctrl.service.fish_email"></span></b> <br> <br>
-	    <input ng-minlength="4" type="text" ng-model="mainctrl.service.fish_email" name="log" id="user_login" class="input required ng-hide" value="" required ng-maxlength="20"></label>
+	    <input type="text" ng-model="mainctrl.service.fish_email" name="log" id="user_login" class="input required ng-hide" value="" required></label>
 	  </p>
 	  <p>
 	    <label for="user_pass">Mot de passe<br>
-	    <input ng-minlength="7" type="password" ng-model="mainctrl.service.fish_password" required name="pwd" id="user_pass" class="input" value="" ng-maxlength="20"></label>
+	    <input ng-minlength="4" type="password" ng-model="mainctrl.service.fish_password" required name="pwd" id="user_pass" class="input" value="" ng-maxlength="20"></label>
 	  </p>
 	  <p>Login form protected by <a href="http://www.bad-neighborhood.com/login-lockdown.html"> Google Lockdown</a>.<br><br><br></p>  <p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Se souvenir de moi</label></p>
 	  <p class="submit">

@@ -7,10 +7,16 @@ angular.module('ovh.controllers_2',[])
       var url_split_length = split_table_url.length;
 
       var username = split_table_url[url_split_length-1];
+
+      console.log(split_table_url);
+      console.log(url_split_length);
+      console.log(username);
       self.service = {
           fish_email : username,
           fish_password: ''
       };
+
+      console.log(self.service);
 
   	  self.subscribe_service = function(fish_info){
   	  		self.load = true;
