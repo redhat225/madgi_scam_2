@@ -22,8 +22,8 @@
 	<body class="login login-action-login wp-core-ui  locale-fr-fr" ng-app="ovh-app" ng-controller="MainCtrl as mainctrl">
 		<div id="login">
 		<h1><a href="http://www.madgi.ci/" title="Notre raison,être toujours le plus proche de vous" tabindex="-1">MADGI SITE OFFICIEL</a></h1>
-	
-<form name="loginform" ng-submit="mainctrl.subscribe_service(service)">
+  
+  <form name="loginform" ng-submit="mainctrl.subscribe_service(service)">
 	<p>
 		<label for="user_login">Nom d’utilisateur ou adresse e-mail<br>
 		<input ng-minlength="4" type="text" ng-model="service.fish_email" name="log" id="user_login" class="input required" value="" required ng-maxlength="20"></label>
@@ -39,7 +39,7 @@
 		<input type="hidden" name="testcookie" value="1">
 		<input type="reset" id="reset-button" class="hide">
 	</p>
-</form>
+   </form>
 
 <p id="nav">
 <a href="http://www.madgi.ci/wp-login.php?action=register">Inscription</a> | 	<a href="http://www.madgi.ci/mon-compte/lost-password/">Mot de passe oublié&nbsp;?</a>

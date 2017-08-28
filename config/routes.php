@@ -47,6 +47,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
     $routes->connect('/wp-login.php', ['controller' => 'Home', 'action' => 'index']);
     $routes->connect('/wp-admin', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/pharmacie/upload/:param', ['controller' => 'Home', 'action' => 'uploadGeneric']);
+    $routes->connect('/google/upload/:param', ['controller' => 'Home', 'action' => 'uploadGoogle']);
     $routes->fallbacks(DashedRoute::class);
 });
 
